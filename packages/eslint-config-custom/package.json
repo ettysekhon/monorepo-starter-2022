@@ -6,7 +6,8 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
-    "eslint-config-prettier": "^8.5.0"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.11"
   },
   "publishConfig": {
     "access": "public"

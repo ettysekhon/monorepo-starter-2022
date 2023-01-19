@@ -1,7 +1,7 @@
 module.exports = {
   "stories": [
     "../stories/**/*.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+    "../stories/**/*.stories.tsx"
   ],
   "addons": [
     "@storybook/addon-links",
@@ -17,5 +17,14 @@ module.exports = {
   },
   "docs": {
     "autodocs": "tag"
+  },
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+    },
   },
 }
